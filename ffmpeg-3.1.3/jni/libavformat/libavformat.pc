@@ -1,0 +1,14 @@
+prefix=build
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 57.41.100
+Requires: 
+Requires.private: libavcodec >= 57.48.101, libavutil >= 55.28.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lssl -lcrypto -lm -lz -pthread -L../../openssl/android/lib -lssl -lcrypto -L/home/sunny/java/android-ndk-r9d/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/lib/gcc/arm-linux-androideabi/4.6/armv7-a -lgcc
+Cflags: -I${includedir}
